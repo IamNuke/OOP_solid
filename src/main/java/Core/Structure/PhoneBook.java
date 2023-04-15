@@ -30,7 +30,7 @@ public class PhoneBook implements Catalog <PhoneContact>, IGetContacts {
     }
 
     @Override
-    public Contact getContact(int index) {
+    public PhoneContact getContact(int index) {
         return contains(index) ? contacts.get(index) : null;
     }
 
