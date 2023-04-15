@@ -6,7 +6,7 @@ import Core.Models.PhoneContact;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PhoneBook implements Catalog <PhoneContact>, IGetContacts {
+public class PhoneBook implements Catalog <PhoneContact>, IGetContacts, IShowContacts {
 
     private final List<PhoneContact> contacts;
 
@@ -51,5 +51,10 @@ public class PhoneBook implements Catalog <PhoneContact>, IGetContacts {
     @Override
     public List<PhoneContact> getContacts () {
         return contacts;
+    }
+
+    @Override
+    public void showContacts() {
+        System.out.println(contacts);
     }
 }
