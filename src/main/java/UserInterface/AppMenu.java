@@ -16,7 +16,7 @@ public class AppMenu {
         try (Scanner in = new Scanner(System.in)) {
 
             while (true) {
-                System.out.println(" 1 - prev  2 - next");
+                System.out.println(" 1 - prev  2 - next  3 - exit");
                 String key = in.next();
                 System.out.print("\033[H\033[J");
                 switch (key) {
@@ -26,6 +26,9 @@ public class AppMenu {
                     case "2":
                         presenter.next();
                         break;
+                    case "3":
+
+                        return;
 
                     default:
                         System.out.println("Такой команды нет");
